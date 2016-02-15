@@ -1,0 +1,59 @@
+﻿{"retCode": "200",
+"msg":	"",
+"returnObj" :	
+{"storeId": "xxxxx",
+"storeNameCn" : "创意坊",
+"storeNameEn" : "chuangyifang",
+"sales" : 1345,
+"logoUrl" : "http:xxxxx",
+"startingPrice" : 12000,
+"distributionFee" : 2000,
+"storeAddrCode" : "123",
+"storeAddrNameCn" : "澳门半岛",
+"storeAddrNameEn" : "i do not know",
+"busiTel1" : "82828282828",
+"busiTel2" : "1111111111",
+"busiHours" : "08:00-22:00",
+"avgPrice" : "12000",
+"storeBriefintroCn" : "一大串,xxxxxxxxx",
+"storeBriefintroEn" : "xxxx",
+"longitude" : "129.023923",
+"latitude" : "12.3334234",
+"distance" : 123,
+"dis" : [
+	{
+	"discountName" : "满减",
+	"discountType" : "1",
+	"discount" : "0.8",
+	"cardRelCn" : "工行VIP卡,工行白金卡",
+	"cardRelEn" : "xxxxxxxx",
+	"custGroupRelCn" : "学生,老师",
+	"custGroupRelEn" : "xx,xxx",
+	"discountIntroduceCn" : "xxxx",
+	"discountIntroduceEn" : "xxxx"
+	},
+	{
+	"discountName" : "8折",
+	"discountType" : "2",
+	"discount" : "0.8",
+	"cardRelCn" : "工行VIP卡,工行白金卡",
+	"cardRelEn" : "xxxxxxxx",
+	"custGroupRelCn" : "学生,老师",
+	"custGroupRelEn" : "xx,xxx",
+	"discountIntroduceCn" : "xxxx",
+	"discountIntroduceEn" : "xxxx"
+	}
+	,
+	{
+	"discountName" : "8折",
+	"discountType" : "3",
+	"discount" : "0.8",
+	"cardRelCn" : "工行VIP卡,工行白金卡",
+	"cardRelEn" : "xxxxxxxx",
+	"custGroupRelCn" : "学生,老师",
+	"custGroupRelEn" : "xx,xxx",
+	"discountIntroduceCn" : "xxxx",
+	"discountIntroduceEn" : "xxxx"
+	}
+]
+}}

@@ -1,0 +1,211 @@
+<div ng-controller="takeOutCtrl" style="height:inherit;">
+  <div class="app-header">
+    <!-- 左侧 -->
+    <div class="header-left">返回</div>
+    <!-- 右侧 -->
+    <div class="header-right">筛选</div>
+    <!-- 中间 -->
+    <div class="app-head-lang1">外卖</div>
+    <div class="app-head-lang2">Burger</div>
+  </div>
+  <!-- takeOut-content -->
+  <div class="scrollHidden">
+    <div class="take-out-top filterActive">
+      <div class="row take-out-btn">
+        <div class="col-xs-4">
+          <img src="../../img/waimai.png">
+          <p>美食外卖</p>
+          <p>Food Take out</p>
+        </div>
+
+        <div class="col-xs-4">
+          <img src="../../img/shuiguo.png">
+          <p>果蔬生鲜</p>
+          <p>Fruil&Fresh Vegetables</p>
+        </div>
+
+        <div class="col-xs-4">
+          <img src="../../img/chaoshi.png">
+          <p>超市便利</p>
+          <p>Supermarker</p>
+        </div>
+      </div>
+
+      <div class="row take-out-btn">
+        <div class="col-xs-4">
+          <img src="../../img/yiyao.png">
+          <p>医药保健</p>
+          <p>Medicine</p>
+        </div>
+
+        <div class="col-xs-4">
+          <img src="../../img/xianhua.png">
+          <p>鲜花速递</p>
+          <p>Flowers</p>
+        </div>
+        
+        <div class="col-xs-4">
+          <img src="../../img/tianpin.png">
+          <p>甜品饮品</p>
+          <p>Desearl&Drinks</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="autoRow filter-content">
+      <div class="row takeOut-filter">
+          <div class="col-xs-3" ng-click="takeOutFilter(1)">
+            <p>全部分类</p>
+            <p>Classification</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+          <div class="col-xs-3" ng-click="takeOutFilter(2)">
+            <p>优惠活动</p>
+            <p>Promotions</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+          <div class="col-xs-3" ng-click="takeOutFilter(3)">
+            <p>商圈</p>
+            <p>District</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+          <div class="col-xs-3" ng-click="takeOutFilter(4)">
+            <p>排序</p>
+            <p>Sort</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+      </div>
+    </div> -->
+
+    <!-- link and dropdown -->
+    <ul class="nav hidden-sm filter-container scrollFix">
+      <li class="dropdown filter-content">
+        <div data-toggle="dropdown" class="col-xs-3 dropdown-toggle" ng-click="isScrollBody(1)">
+          <div translate="header.navbar.new.NEW">全部分类</div>
+          <div translate="header.navbar.new.NEW">Classification</div>
+          <span class="caret"></span>
+        </div>
+        <ul class="col-xs-6 dropdown-menu filter-content-child" role="menu">
+          <li ng-repeat="largeItem in filterList.categoryLarges" ng-click="allTypeClick(largeItem)">
+            <a ng-bind="largeItem.nameCn"></a>
+            <a ng-bind="largeItem.nameEn"></a>
+          </li>
+        </ul>
+        <ul class="col-xs-6 dropdown-menu filter-content-child filter-child-right" role="menu">
+          <div class="filter-click"> 
+            <li ng-repeat="smallItem in typeDetail">
+              <div ng-bind="smallItem.nameCn"></div>
+              <div ng-bind="smallItem.nameEn"></div>
+            </li>
+          </div>
+        </ul>
+      </li>
+      <li class="dropdown filter-content">
+        <div data-toggle="dropdown" class="col-xs-3 dropdown-toggle" ng-click="isScrollBody(2);">
+          <div translate="header.navbar.new.NEW">优惠活动</div>
+          <div translate="header.navbar.new.NEW">Promotions</div>
+          <span class="caret"></span>
+        </div>
+        <ul class="col-xs-6 dropdown-menu filter-content-child" role="menu">
+          <li ng-repeat="largeItem in filterList.categoryLarges" ng-click="allTypeClick(largeItem);">
+            <a ng-bind="largeItem.nameCn"></a>
+            <a ng-bind="largeItem.nameEn"></a>
+          </li>
+        </ul>
+        <ul class="col-xs-6 dropdown-menu filter-content-child filter-child-right" role="menu">       
+            <li ng-repeat="smallItem in typeDetail">
+              <div ng-bind="smallItem.nameCn"></div>
+              <div ng-bind="smallItem.nameEn"></div>
+            </li>
+        </ul>
+      </li>
+      <li class="dropdown filter-content">
+        <div data-toggle="dropdown" class="col-xs-3 dropdown-toggle" ng-click="isScrollBody(3);">
+          <div translate="header.navbar.new.NEW">商圈</div>
+          <div translate="header.navbar.new.NEW">District</div>
+          <span class="caret"></span>
+        </div>
+        <ul class="col-xs-6 dropdown-menu filter-content-child" role="menu">
+          <li ng-repeat="communityItem in filterList.communitys" ng-click="allTypeClick(largeItem)">
+            <a ng-bind="communityItem.communityNameCn"></a>
+            <a ng-bind="communityItem.communityNameEn"></a>
+          </li>
+        </ul>
+        <ul class="col-xs-6 dropdown-menu filter-content-child filter-child-right" role="menu">       
+            <li ng-repeat="smallItem in typeDetail">
+              <div ng-bind="smallItem.nameCn"></div>
+              <div ng-bind="smallItem.nameEn"></div>
+            </li>
+        </ul>
+      </li>
+      <li class="dropdown filter-content">
+        <div data-toggle="dropdown" class="col-xs-3 dropdown-toggle" ng-click="isScrollBody(4);">
+          <div translate="header.navbar.new.NEW">排序</div>
+          <div translate="header.navbar.new.NEW">Sort</div>
+          <span class="caret"></span>
+        </div>
+        <ul class="col-xs-6 dropdown-menu filter-content-child" role="menu">
+          <li ng-repeat="largeItem in filterList.categoryLarges" ng-click="allTypeClick(largeItem)">
+            <a ng-bind="largeItem.nameCn"></a>
+            <a ng-bind="largeItem.nameEn"></a>
+          </li>
+        </ul>
+        <ul class="col-xs-6 dropdown-menu filter-content-child filter-child-right" role="menu">       
+            <li ng-repeat="smallItem in typeDetail">
+              <div ng-bind="smallItem.nameCn"></div>
+              <div ng-bind="smallItem.nameEn"></div>
+            </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="cover takeOut-filter-cover" ng-click="isScrollBody();"></div>
+
+    <div class="autoRow mainFix">
+      <div class="row take-store-list">
+        <div class="col-xs-4 store-list-left"><img src="../../img/food_ico.png"></div>
+        <div class="col-xs-8 store-list-right">
+          <div class="list-title-size"><span>汉堡王（澳门店）</span></div>
+          <div class="aSet-detail-title"><span>Burger King（Macao shopl）</span></div>
+          <div><span>免费配送 | 0元起配送</span></div>
+          <div><span>Free delivery fee | Start delivery at $ 0</span></div>
+          <div class="gray-font"><span class="minus-ico">减</span> 满30减5 Buy 30 MOP get 5 MOP off</div>
+        </div>
+      </div>
+
+      <div class="row take-store-list">
+        <div class="col-xs-4 store-list-left"><img src="../../img/food_ico.png"></div>
+        <div class="col-xs-8 store-list-right">
+          <div class="list-title-size"><span>汉堡王（澳门店）</span></div>
+          <div class="aSet-detail-title"><span>Burger King（Macao shopl）</span></div>
+          <div><span>免费配送 | 0元起配送</span></div>
+          <div><span>Free delivery fee | Start delivery at $ 0</span></div>
+          <div class="gray-font"><span class="discount-ico">减</span> 满30减5 Buy 30 MOP get 5 MOP off</div>
+        </div>
+      </div>
+
+      <div class="row take-store-list">
+        <div class="col-xs-4 store-list-left"><img src="../../img/food_ico.png"></div>
+        <div class="col-xs-8 store-list-right">
+          <div class="list-title-size"><span>汉堡王（澳门店）</span></div>
+          <div class="aSet-detail-title"><span>Burger King（Macao shopl）</span></div>
+          <div><span>免费配送 | 0元起配送</span></div>
+          <div><span>Free delivery fee | Start delivery at $ 0</span></div>
+          <div class="gray-font"><span class="discount-ico">减</span> 满30减5 Buy 30 MOP get 5 MOP off</div>
+        </div>
+      </div>
+
+      <div class="row take-store-list">
+        <div class="col-xs-4 store-list-left"><img src="../../img/food_ico.png"></div>
+        <div class="col-xs-8 store-list-right">
+          <div class="list-title-size"><span>汉堡王（澳门店）</span></div>
+          <div class="aSet-detail-title"><span>Burger King（Macao shopl）</span></div>
+          <div><span>免费配送 | 0元起配送</span></div>
+          <div><span>Free delivery fee | Start delivery at $ 0</span></div>
+          <div class="gray-font"><span class="discount-ico">减</span> 满30减5 Buy 30 MOP get 5 MOP off</div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>

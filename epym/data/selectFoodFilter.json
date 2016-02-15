@@ -1,0 +1,37 @@
+﻿{
+    "retCode": "200", 
+    "returnObj": {
+        "dis": [
+            {
+                "discountId": "1000001", 
+                "discountType": "1", 
+                "postposition": 10, 
+                "prepose": 100
+            }
+        ], 
+        "classList": [
+            {
+                "classCode": "01", 
+                "classNameCn": "主食", 
+                "classNameEn": "food", 
+                "classSort": "1", 
+                "createDate": 1452441600000, 
+                "createId": "1111", 
+                "id": "1", 
+                "sourceCode": "3333000003", 
+                "status": "1"
+            }, 
+            {
+                "classCode": "02", 
+                "classNameCn": "汤", 
+                "classNameEn": "soup", 
+                "classSort": "2", 
+                "createDate": 1452355200000, 
+                "createId": "2222", 
+                "id": "2", 
+                "sourceCode": "3333000003", 
+                "status": "1"
+            }
+        ], 
+        "ifCollect": 0
+    }}

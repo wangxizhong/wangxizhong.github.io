@@ -1,0 +1,135 @@
+<div ng-controller="storeInfo">
+  <div class="app-header">
+    <!-- 左侧 -->
+    <div class="header-left">返回</div>
+    <!-- 右侧 -->
+    <div class="header-right">筛选</div>
+    <!-- 中间 -->
+    <div class="app-head-lang1">汉堡王（澳门店）</div>
+    <div class="app-head-lang2">Burger King(Macao Shopl)</div>
+  </div>
+
+    <!-- 滚动页面时固定inner块 -->
+      <div class="autoRow select-fixed" id="inner">
+        <!-- 顶部筛选菜单 -->
+        <ul class="row nav hidden-sm filter-container">
+          <li class="dropdown">
+            <div data-toggle="dropdown" class="text-center col-xs-6 dropdown-toggle select-food-filter padding5">
+              <div translate="header.navbar.new.NEW">菜单</div>
+              <div translate="header.navbar.new.NEW">Set menu</div>
+              <span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu filter-content-child select-food-filter-child top50" role="menu">
+              <div class="filter-click">
+                <li ng-repeat="classItem in classList">
+                  <div ng-bind="classItem.classNameCn"></div>
+                  <div ng-bind="classItem.classNameEn"></div>
+                </li>
+              </div>
+            </ul>
+            <div class="select-food-cover" style="top: 35%;"></div>
+          </li>
+          <li class="dropdown filter-content">
+            <div data-toggle="dropdown" class="text-center col-xs-6 padding5">
+              <div translate="header.navbar.new.NEW">店铺</div>
+              <div translate="header.navbar.new.NEW">shop</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div style="">
+        <div class="store-info-bg">
+          <div class="col-xs-4">
+            <i class="store-ico"></i>
+          </div>
+          <div class="col-xs-8 store-bg-right">
+            <div class="store-bg-title" ng-bind="storeInfo.storeNameCn"></div>
+            <div class="margin-bottom5" ng-bind="storeInfo.storeNameEn"></div>
+            <div>月销量<span ng-bind="storeInfo.sales"></span> | <span ng-bind="storeInfo.startingPrice"></span>元起送 | 免费配送</div>
+            <div class="margin-bottom5">num<span ng-bind="storeInfo.sales"></span> | <span ng-bind="storeInfo.startingPrice"></span> money send</div>
+            <div><span class="addMoney-ico">加</span> 加收服务费 service charge</div>
+          </div> 
+        </div>
+
+        <div class="minus-line-con">
+          <!-- <div class="minus-line bor-bottom">
+            <span class="minus-ico ico-marginRight">减</span>
+            <span>满 30 减 5 money send</span>
+          </div>
+          <div class="minus-line">
+            <span class="discount-ico ico-marginRight">折</span>
+            <span>8折 20% off</span>
+          </div> -->
+
+          <div class="dis-class" ng-repeat="disItem in storeInfo.dis">
+            <div class="minus-line bor-bottom" ng-show="disItem.discountType == 1">
+              <span class="minus-ico ico-marginRight">减</span>
+              <span>满 30 减 5 money send</span>
+            </div>
+
+            <div class="minus-line bor-bottom" ng-show="disItem.discountType == 2">
+              <span class="discount-ico ico-marginRight">折</span>
+              <span>8折 20% off</span>
+            </div>
+
+            <div class="minus-line bor-bottom" ng-show="disItem.discountType == 3">
+              <span class="addMoney-ico ico-marginRight">加</span>
+              <span>加收服务费 service charge</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="autoRow info-line-con">
+          <div class="row info-line bor-bottom">
+            <div class="col-xs-4 info-line-left">
+              <p>营业时间</p>
+              <p>business hours</p>
+            </div>
+            <div class="col-xs-8 info-line-center" ng-bind="storeInfo.busiHours">9：00-19：00</div>
+          </div>
+          <div class="row info-line bor-bottom">
+            <div class="col-xs-4 info-line-left">
+              <p>商家电话</p>
+              <p>business hours</p>
+            </div>
+            <div class="col-xs-6 info-line-center" ng-bind="storeInfo.busiTel1  + '&nbsp;' +storeInfo.busiTel2"></div>
+            <div class="col-xs-2 store-call-phone" ng-click="isCall = !isCall"></div>
+          </div>
+          <div class="row info-line bor-bottom">
+            <div class="col-xs-4 info-line-left">
+              <p>商家地址</p>
+              <p>business hours</p>
+            </div>
+            <div class="col-xs-5 info-line-center">
+              <p ng-bind="storeInfo.storeAddrNameCn"></p>
+              <p ng-bind="storeInfo.storeAddrNameEn"></p>
+            </div>
+            <div class="col-xs-3 info-position-ico">
+              <span ng-bind="storeInfo.distance"></span>m
+            </div>
+          </div>
+          <div class="row info-line bor-bottom right-ico">
+            <div class="col-xs-4 info-line-left">
+              <p>商户介绍</p>
+              <p>business hours</p>
+            </div>
+            <div class="col-xs-8 info-line-center">
+              <p ng-bind="storeInfo.storeBriefintroCn"></p>
+              <p ng-bind="storeInfo.storeBriefintroEn"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 打电话弹出层 -->
+      <div ng-show="isCall">
+        <div class="callPhone-cover">        
+        </div>
+        <div class="callPhone-show">
+          <div class="phoneNum bor-bottom">13333333333</div>
+          <div class="phoneNum">13333333333</div>
+        </div>
+        <div class="callPhone-back" ng-click="isCall = !isCall">back</div>
+      </div>
+</div>

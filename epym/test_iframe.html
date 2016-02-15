@@ -1,0 +1,77 @@
+<form action="https://ebankpfovaopay3.dccnet.com.cn/servlet/ICBCEBusinessServlet" target="my-iframe" method="post">
+	<table width="100%" BORDER="0" CELLSPACING="1" CELLPADDING="1" ALIGN="center" bordercolor="#FFFFFF">
+    <tr bgcolor="FEFEFE">
+        <td width="20%">接口名：</td><td width="30%"><INPUT ID="interfaceName" NAME="interfaceName" TYPE="text" size="45" value="ICBC_MYEBANK_B2C"></td>
+        <td width="20%">接口版本：</td><td width="30%"><INPUT ID="interfaceVersion" NAME="interfaceVersion" TYPE="text" size="45" value="2.0.0.0"></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>地区码：</td><td colspan="4"><INPUT ID="areaCode" NAME="areaCode" TYPE="text" size="45" value="0119"></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+        <td>订单号：</td><td><INPUT ID="orderid" NAME="orderid" TYPE="text" size="45" value="CHINATEL00001"></td>
+        <td>订单金额：</td><td><INPUT ID="amount" NAME="amount" TYPE="text" size="45" value="100"></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>订单币种：</td><td><INPUT ID="curType" NAME="curType" TYPE="text" size="45" value="MOP"></td>
+		<td>商城编号：</td><td><INPUT ID="merID" NAME="merID" TYPE="text" size="45" value="0119EC20000183"></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+        <td>商户账号：<br/>商城收费入账账号（银行提供）</td><td><INPUT ID="merAcct" NAME="merAcct" TYPE="text" size="45" value="0119100200002671036"></td>
+        <td>通知类型：<br/>HS:实时发送通知；AG:不发送通知</td><td><INPUT ID="notifyType" NAME="notifyType" TYPE="text" size="45" value="HS"></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>通知地址：</td><td><INPUT ID="merURL" NAME="merURL" TYPE="text" size="45" value="http://123.13.125.108:80/B2C/ordersubmit/orderreply.jsp"></td>
+        <td>通知结果类型：</td><td><INPUT ID="resultType" NAME="resultType" TYPE="text" size="45" value="1"></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+        <td>交易时间：</td><td><INPUT ID="orderDate" NAME="orderDate" TYPE="text" size="45" value="20151120091652"></td>
+        <td>语言标示：</td><td><INPUT NAME="ieu" TYPE="text" size="45" value="zh-CN"></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>商品编号：</td><td><INPUT NAME="goodsID" TYPE="text" size="45" value="goodNo001"></td>
+        <td>商品名称：</td><td><INPUT NAME="goodsName" TYPE="text" size="45" value="某个橡皮擦"></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+        <td>商品数量：</td><td><INPUT NAME="goodsNum" TYPE="text" size="45" value="1"></td>
+        <td>已含运费金额：</td><td><INPUT NAME="carriageAmt" TYPE="text" size="45" value="100"></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>已含运费币种：</td><td><INPUT NAME="carriageCurr" TYPE="text" size="45" value="MOP"></td>
+        <td>商城提示：</td><td><INPUT NAME="merHint" TYPE="text" size="45" value="没用的提示"></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+        <td>特殊商户自定义字段变量名称：</td><td><INPUT NAME="specialListName" TYPE="text" size="45" value="貌似输什么都不管用"></td>
+        <td>特殊商户自定义字段变量内容：</td><td><INPUT NAME="specialList" TYPE="text" size="45" value="艹"></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>备注字段1：</td><td><INPUT NAME="remark1" TYPE="text" size="45" value="简体备注"></td>
+        <td>备注字段2：</td><td><INPUT NAME="remark2" TYPE="text" size="45" value="繁體備註"></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+		<td>特约商户代码：</td><td><input name="tmerID" type="text" size="45" value="011900880998"/></td>
+        <td></td><td></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>银联交易类型：</td>
+        <td><input name="upopType" type="text" size="45" value="1"/>
+        </td>
+        <td></td><td></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+        <td>证书私钥：</td><td><INPUT ID="privateKeyFile" TYPE="text" size="45" value="c:\\fakepath\\test1.key"></td>
+        <td>私钥密码：</td><td><INPUT ID="privateKeyPassword" TYPE="text" size="45" value="12345678"></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>证书公钥：</td><td colspan="4"><INPUT ID="publicKeyFile" TYPE="text" size="45" value="c:\\fakepath\\test1.crt"></td>
+    </tr>
+    <tr bgcolor="FEFEFE">
+        <td>订单签名数据：</td><td colspan="4"><INPUT ID="merSignMsg" NAME="merSignMsg" TYPE="text" size="100" value=""></td>
+    </tr>
+    <tr bgcolor="AEAEAE">
+        <td>商城证书公钥：</td><td colspan="4"><INPUT ID="merCert" NAME="merCert" TYPE="text" size="100" value="MIIDKjCCAhKgAwIBAgIKbILKECSWACl8RDANBgkqhkiG9w0BAQUFADBDMR4wHAYDVQQDExVJQ0JDIFRlc3QgUGVyc29uYWwgQ0ExITAfBgNVBAoTGHBlcnNvbmFsdGVzdC5pY2JjLmNvbS5jbjAeFw0xNjAxMTgwODA4NTNaFw0yMTAxMTUxNTU5NTlaMEwxGDAWBgNVBAMTDzNFX3Rlc3QyLmUuMDExOTENMAsGA1UECxMEMDExOTEhMB8GA1UEChMYcGVyc29uYWx0ZXN0LmljYmMuY29tLmNuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXODrST45/YtqiEJrfdXJmjsEmA/KMu75L0yZ5DbJ8I6sHvixnEIEvteRwOe6WQ9mld26/sftR9JvA8amUNHcz8/yuMVl4w4TodaUhpXdUBJaYfH5OYn5q4QOrrKRiS+NtmueuDNid2WuQ1kOKgVRKJj3KO5+9kAyC+aNRFRE1EwIDAQABo4GaMIGXMB8GA1UdIwQYMBaAFHb5YKYd5pkk1fKA1ofZTqhL/7lRMFUGA1UdHwROMEwwSqBIoEakRDBCMQ8wDQYDVQQDEwZjcmw1NDQxDDAKBgNVBAsTA2NybDEhMB8GA1UEChMYcGVyc29uYWx0ZXN0LmljYmMuY29tLmNuMB0GA1UdDgQWBBQrVweaXJoB9ETTUjCfKHPi1egswDANBgkqhkiG9w0BAQUFAAOCAQEAXmV2FgbUtXeJnNCQN2cOxQJwalP9BDsNWLJGkxixNE/UpmkineDqDLhFf0u+rMKYaDQ3MxLkx7TSpi62s1i4jnTwS0w06jmpD4Ca+fN4JQ2YW3LrHCs+vbJxAejJMB/k68sJP073LrdKXfcJ9zIgfwSEtPzgEhXx6+E2dwglfK6nnwb1nO4RLgJYGYanLNFh01CbEbmgbVxuyeRuv/5YRqNA+lF/KecMyXq55uKSgEPZqONHG8+t8UfcfcBrXidaKnYjxLaMQ2mKkj5PBRNFnNtQis/mtXVgxMm4z9q9Rc50Bdswp/9zqVBE3IPzdGXmw5Awh/K63GfSxIVQPtj0Ow=="></td>
+    </tr>
+  </table>
+   <button>submit</button>
+</form>
+		
+<iframe name="my-iframe" src="" width="90%" height="90%"></iframe>

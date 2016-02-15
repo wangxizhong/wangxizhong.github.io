@@ -1,0 +1,142 @@
+{
+    "retCode": "200", 
+    "returnObj": {
+        "totalNum": 6, 
+        "goodsList": [
+            {
+                "goodsId": "006", 
+                 "goodsIntroduceCn": "1", 
+                "goodsIntroduceEn": "1", 
+                "goodsNameCn": "套餐A", 
+                "goodsNameEn": "coA", 
+                "goodsShape": "1", 
+                "goodsType": "1", 
+                "price": 14600, 
+                "salenum": 10, 
+                "stock": 20, 
+                "stockNum": 10, 
+                "subGoodsList": [
+                    {
+                        "goodsClassify": "02", 
+                        "goods" : [{
+                          "goodsId": "001", 
+                          "goodsNameCn": "可乐", 
+                          "goodsNameEn": "colo"
+                        } , {
+                          "goodsId": "002", 
+                          "goodsNameCn": "雪碧", 
+                          "goodsNameEn": "xuebi"
+                        }, {
+                          "goodsId": "003", 
+                          "goodsNameCn": "王老吉", 
+                          "goodsNameEn": "wanglaoji"
+                        }],
+                        "typeNameCn": "汤", 
+                        "typeNameEn": "soup"
+                    }, 
+                    {
+                        "goodsClassify": "01", 
+                        "goods": [{
+                          "goodsId": "004", 
+                          "goodsNameCn": "米饭", 
+                          "goodsNameEn": "米饭"
+                        } , {
+                          "goodsId": "005", 
+                          "goodsNameCn": "面条", 
+                          "goodsNameEn": "miantiao"
+                        }], 
+                        "typeNameCn": "主食", 
+                        "typeNameEn": "food"
+                    }
+                ], 
+                "unitNameCn": "件", 
+                "unitNameEn": "item"
+            }, 
+            {
+                "goodsId": "001", 
+                "goodsIntroduceCn": "1", 
+                "goodsIntroduceEn": "11", 
+                "goodsNameCn": "可乐", 
+                "goodsNameEn": "colo", 
+                "goodsShape": "0", 
+                "goodsType": "1", 
+                "price": 1, 
+                "salenum": 1, 
+                "stock": 1, 
+                "stockNum": 1, 
+                "typeNameCn": "汤", 
+                "typeNameEn": "soup", 
+                "unitNameCn": "個", 
+                "unitNameEn": "months"
+            }, 
+            {
+                "goodsId": "003", 
+                "goodsIntroduceCn": "1", 
+                "goodsIntroduceEn": "1", 
+                "goodsNameCn": "王老吉", 
+                "goodsNameEn": "wanglaoji", 
+                "goodsShape": "0", 
+                "goodsType": "1", 
+                "price": 200, 
+                "salenum": 100, 
+                "stock": 1000, 
+                "stockNum": 100, 
+                "typeNameCn": "汤", 
+                "typeNameEn": "soup", 
+                "unitNameCn": "個", 
+                "unitNameEn": "months"
+            }, 
+            {
+                "goodsId": "002", 
+                "goodsIntroduceCn": "1", 
+                "goodsIntroduceEn": "1", 
+                "goodsNameCn": "雪碧", 
+                "goodsNameEn": "xuebi", 
+                "goodsShape": "0", 
+                "goodsType": "1", 
+                "price": 1, 
+                "salenum": 1, 
+                "stock": 1, 
+                "stockNum": 1, 
+                "typeNameCn": "汤", 
+                "typeNameEn": "soup", 
+                "unitNameCn": "個", 
+                "unitNameEn": "months"
+            }, 
+            {
+                "goodsId": "004", 
+                "goodsIntroduceCn": "1", 
+                "goodsIntroduceEn": "1", 
+                "goodsNameCn": "米饭", 
+                "goodsNameEn": "米饭", 
+                "goodsShape": "0", 
+                "goodsType": "1", 
+                "price": 1000, 
+                "salenum": 11, 
+                "stock": 2000, 
+                "stockNum": 11, 
+                "typeNameCn": "主食", 
+                "typeNameEn": "food", 
+                "unitNameCn": "件", 
+                "unitNameEn": "item"
+            }, 
+            {
+                "goodsId": "005", 
+                "goodsIntroduceCn": "1", 
+                "goodsIntroduceEn": "1", 
+                "goodsNameCn": "面条", 
+                "goodsNameEn": "miantiao", 
+                "goodsShape": "0", 
+                "goodsType": "1", 
+                "price": 200, 
+                "salenum": 15, 
+                "stock": 3000, 
+                "stockNum": 15, 
+                "typeNameCn": "主食", 
+                "typeNameEn": "food", 
+                "unitNameCn": "件", 
+                "unitNameEn": "item"
+            }
+        ]
+    }}
+

@@ -1,0 +1,184 @@
+<div ng-controller="selectFoodCtrl">
+  <div class="app-header">
+    <!-- 左侧 -->
+    <div class="header-left">返回</div>
+    <!-- 右侧 -->
+    <div class="header-right">筛选</div>
+    <!-- 中间 -->
+    <div class="app-head-lang1">汉堡王（澳门店）</div>
+    <div class="app-head-lang2">Burger King(Macao Shopl)</div>
+  </div>
+
+  <!-- takeOut-content -->
+  <div class="take-out-container">
+
+    <!-- 滚动页面时固定inner块 -->
+      <div class="autoRow select-fixed" id="inner">
+        <!-- 顶部筛选菜单 -->
+        <ul class="row nav hidden-sm filter-container">
+          <li class="dropdown">
+            <div data-toggle="dropdown" class="text-center col-xs-6 dropdown-toggle select-food-filter padding5">
+              <div translate="header.navbar.new.NEW">菜单</div>
+              <div translate="header.navbar.new.NEW">Set menu</div>
+              <span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu filter-content-child select-food-filter-child top50" role="menu">
+              <div class="filter-click">
+                <li ng-repeat="classItem in classList">
+                  <div ng-bind="classItem.classNameCn"></div>
+                  <div ng-bind="classItem.classNameEn"></div>
+                </li>
+              </div>
+            </ul>
+            <div class="select-food-cover" style="top: 35%;"></div>
+          </li>
+          <li class="dropdown filter-content">
+            <div data-toggle="dropdown" class="text-center col-xs-6 padding5">
+              <div translate="header.navbar.new.NEW">店铺</div>
+              <div translate="header.navbar.new.NEW">shop</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="row">
+          <div class="col-xs-12 floating-info" ng-repeat="disItem in storeDis">
+            <div ng-show="disItem.discountType == 1">
+              <span class="minus-ico">减</span>
+              满<span ng-bind="disItem.prepose"></span>减<span ng-bind="disItem.postposition"></span>
+            </div>
+
+            <div ng-show="disItem.discountType == 2">
+              <span class="discount-ico">折</span>
+              <span ng-bind="disItem.discount"></span>
+            </div>
+
+            <div ng-show="disItem.discountType == 3">
+              <span class="addMoney-ico">加</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="autoRow" style="margin-top: 69px; margin-bottom: 45px;">
+        <div ng-repeat="item in foodList">
+          <!--套餐-->
+          <div id="aSet-container" class="row autoRow" ng-show="item.goodsShape == 1">
+            <div class="row food-list aSetFood-list no-borBottom">
+                <div class="col-xs-3 food-list-left"><img src="../../img/hanbao.png"></div>
+                <div class="col-xs-7 food-list-right">
+                  <div><span ng-bind="item.goodsNameCn"></span></div>
+                  <div ng-bind="item.goodsNameEn"></div>
+                  <div><span class="orange-font" ng-bind="item.price"></span><span class="gray-font">/份 sel</span></div>
+                </div>
+                <div class="col-xs-2">
+                    <i class="add-food-ico" ng-click="aSetAddFood($index, item)"></i>
+                </div>
+            </div>
+
+            <div class="row aSet-detail-container" ng-repeat="goodsClassItem in item.subGoodsList">
+              <div>
+                <span ng-bind="goodsClassItem.typeNameCn + '&nbsp;' + goodsClassItem.typeNameEn"></span>
+              </div>
+              <div class="aSet-detail" ng-repeat="goodsItem in goodsClassItem.goods" ng-click="aSetSelect($index, goodsClassItem, item)" ng-class="{aSetActive: $index == goodsClassItem.index}">
+                <div ng-bind="goodsItem.goodsNameCn"></div>
+                <div ng-bind="goodsItem.goodsNameEn"></div>
+              </div>
+            </div>
+          </div>
+
+          <!--单品-->
+          <div class="row food-list" ng-show="item.goodsShape == 0">
+              <div class="col-xs-3 food-list-left"><img src="../../img/hanbao.png"></div>
+              <div class="col-xs-5 food-list-right">
+                <div><span ng-bind="item.goodsNameCn"></span></div>
+                <div><span ng-bind="item.goodsNameEn"></span></div>
+                <div><span class="orange-font" ng-bind="item.price"></span></div>
+              </div>
+              <div class="col-xs-4 food-list-count">
+                  <i class="odd-food-ico" ng-click="oddFood(item)" ng-show="item.foodCount > 0"></i>
+                  <span ng-bind="item.foodCount" ng-show="item.foodCount > 0">1</span>
+                  <i class="add-food-ico" ng-click="addFood(item)"></i>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 购物车隐藏内容 -->
+      <div class="autoRow pay-car-click" ng-show="isPayCar">
+        <div class="row pay-car-title">
+          <div class="col-xs-6">
+            <div>购物车</div>
+            <div>Shopping carl</div>
+          </div>
+          <div class="col-xs-6 text-right" ng-click="clearPayCar()">
+            <div class="clear-ico">清空全部</div>
+            <div>Clear All</div>
+          </div>
+        </div>
+
+        <!-- 套餐 -->
+        <div ng-repeat="itemCar in shopingCar">
+          <div class="pay-car-aSetList-container" ng-show="itemCar.goodsShape == 1">
+            <div class="row pay-car-list no-borBottom no-pad-btm">
+              <div class="col-xs-5">
+                <div ng-bind="itemCar.goodsNameCn"></div>
+                <div ng-bind="itemCar.goodsNameEn"></div>
+              </div>
+              <div class="col-xs-3 car-food-money">
+                <div ng-bind="itemCar.price"></div>
+              </div>
+              <div class="col-xs-4 car-list-count">
+                <i class="odd-food-ico"></i>
+                <span class="car-count" ng-bind="itemCar.foodCount"></span>
+                <i class="add-food-ico"></i>
+              </div>
+            </div>
+
+            <div class="row aSet-detail-container bor-bottom">
+              <div ng-repeat="itemAset in itemCar.subGoodsList">
+                {{itemAset.unitNameCn}}
+                <div class="aSet-detail aSetActive" ng-repeat="itemGoods in itemAset.goods" ng-show="itemGoods.isNeed == 1">
+                  <div ng-bind="itemGoods.goodsNameCn"></div>
+                  <div ng-bind="itemGoods.goodsNameEn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 单品 -->
+          <div class="row pay-car-list" ng-show="itemCar.goodsShape == 0">
+            <div class="col-xs-5">
+              <div ng-bind="itemCar.goodsNameCn"></div>
+              <div ng-bind="itemCar.goodsNameEn"></div>
+            </div>
+            <div class="col-xs-3 car-food-money">
+              <div ng-bind="itemCar.price"></div>
+            </div>
+            <div class="col-xs-4 car-list-count">
+              <i class="odd-food-ico" ng-click="oddFood(itemCar)"></i>
+              <span class="car-count" ng-bind="itemCar.foodCount"></span>
+              <i class="add-food-ico" ng-click="addFood(itemCar)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 购物车内容 -->
+      <div class="autoRow" style="margin-bottom: 45px;">
+          <!-- 购物车没展开时 -->
+          <div class="row pay-car">
+            <div class="col-xs-2 pay-car-ico" ng-click="payCarShow()">
+              <span ng-bind="payCarNum">0</span>
+            </div>
+            <div class="col-xs-7 pay-car-info">
+                <p>MOP <span ng-bind="payCarPrice"></span><span class="line-font-ico">免配送费 | Delivery</span></p>
+                <p>还差 MOP 10 起送 Short of 10 yuan to send</p>
+            </div>
+            <div class="col-xs-3 pay-car-btn">OK</div>
+          </div>
+        </div>
+
+        <div class="cover" ng-click="payCarShow()" ng-show="isCover"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,218 @@
+.pay {
+	color: #6f6f6f;
+	margin-bottom: 60px;
+}
+/*订单确认*/
+.pay .deliveryAddress {
+	border-top: 7px solid #f1f1f1;
+	border-bottom: 7px solid #f1f1f1;
+	background-color: #fff;
+	padding: 4px 12px;
+	color: #3c3c3c;
+}
+.pay .go_arrow {
+	width: 100%;
+	font-size: 15px;
+    background: url(../img/go_arrow.png) no-repeat right center;
+    background-size: 8px 15px;
+    background-position: 98% center;
+}
+.pay .go_arrow .address {
+	margin-top: 10px;
+}
+.pay .payway {
+	border-bottom: 7px solid #f1f1f1;
+	background-color: #fff;
+	padding: 4px 12px;
+}
+.pay .payway .chooseway {
+	padding: 10px 0;
+	border-bottom: 1px solid #f1f1f1;
+}
+.pay .payway .paywayWord {
+	padding-top: 2px;
+}
+.pay .payway .payMethod {
+	text-align: center;
+	border-radius: 4px;
+	border : 1px solid #cacaca;
+	padding: 1px 4px;
+}
+.pay .payway .chosenMethod {
+	background: #cacaca;
+	color: #ffffff;	
+}
+.pay .payway .methodMargin {
+	margin-right: 10px;
+}
+.pay .lang2word {
+	font-size: 12px;
+}
+.pay .chooseCard {
+	position: relative;
+	padding: 10px 0;
+	border-bottom: 1px solid #f1f1f1;
+}
+.pay .chooseCard .icbcIcon {
+	position: absolute;
+	left: -36px;
+	width: 30px;
+	height: 30px;
+	background: url(../img/icbc_icon.png) 0 0 no-repeat;
+}
+.pay .chooseCard .chosenCard {
+	position: absolute;
+	top: 14px;
+	left: 130px;
+	line-height: 30px;
+}
+.pay .notes {
+	position: relative;
+	padding: 10px 0;
+}
+.pay .notesDetail {
+	position: absolute;
+	top: 14px;
+	left: 100px;
+	line-height: 30px;
+}
+.pay .orderMsg {
+	background-color: #fff;
+	padding: 4px 12px;
+}
+.pay .orderMsg .msgHeight {
+	padding: 7px 0;
+}
+.pay .orderMsg .goodsList {
+	border-bottom: 1px solid #f1f1f1;
+}
+.pay .orderMsg .goodsNum {
+	margin-right: 20px;	
+}
+.pay .orderMsg .lineHeight {
+	line-height: 37px;
+}
+.pay .orderPrice {
+	color: #f96b1d;
+}
+.pay .rightWord {
+	text-align: right;
+}
+.pay .orderMsg .freight {
+	padding: 5px 0;
+	font-size: 12px;
+}
+.pay .orderMsg .actualPayAmount {
+	border-top: 1px solid #f1f1f1;
+	border-bottom: 1px solid #f1f1f1;
+}
+.pay .orderConfirm {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 55px;
+	width: 100%;
+	background: #ffffff;
+	border-top: 5px solid #f1f1f1;
+	z-index: 10;
+}
+.pay .orderConfirm .confirmWord {
+	line-height: 20px;
+	font-size: 15px;
+	color: #3c3c3c;
+	margin-top: 8px;
+	margin-left: 15px;
+}
+.pay .orderConfirm .confirmPrice {
+	margin-left: 20px;
+	line-height: 55px;
+	font-size: 17px;
+}
+.pay .orderConfirm .confirmbtn {
+	width: 90px;
+	height: 55px;
+	background: #fb5555;
+	text-align: center;
+	line-height: 55px;
+	font-size: 17px;
+}
+
+/* 添加备注 */
+.addNotes {
+	background: #fff;
+}
+.pay .notesSave {
+	font-size: 14px;
+	color: #5f5f5f;
+	line-height: 16px;
+	padding-top: 5px;
+}
+.pay .notesArea {
+	border-top: 1px solid #f1f1f1;
+}
+.pay .notesArea textarea {
+	height: 150px;
+	width: 100%;
+	overflow: auto;
+	border: none;
+	padding: 10px;
+    font-size: 16px;
+    color: #cacaca;
+	word-break:break-all;
+}
+.pay .orderPay {
+	border-top: 7px solid #f1f1f1;
+	font-size: 15px;
+}
+.pay .orderPay .actualPayAmount {
+	border-bottom: none!important;
+}
+.pay .payConfirmbtn {
+	width: 90%;
+	margin: 10px auto;
+	height: 50px;
+	font-size: 16px;
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	background: #fb5555;
+}
+.pay .orderStatus {
+	background: #5f5f5f;
+	width: 100%;
+	height: 55px;
+	padding: 10px;
+	font-size: 15px;
+	color: #fff;
+	line-height: 17px;
+}
+.pay .orderStatus .statusicon {
+	position: relative;
+}
+.pay .successStatus {
+	position: absolute;
+	top: 3px;
+	left: -40px;
+	width: 30px;
+	height: 30px;
+}
+/* 支付成功 */
+.pay .payment {
+	height: 180px;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 22px;
+	color: #000;
+	line-height: 25px;
+}
+.pay .paymentWord {
+	font-size: 20px;
+}
+.pay .paymentImg {
+	margin-top: 10px;
+}
+.pay .orderno {
+	border-bottom: 1px solid #f1f1f1;
+}

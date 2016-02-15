@@ -1,0 +1,64 @@
+<div ng-controller="takeOutCtrl">
+  <div class="app-header login-header">
+    <div class="header-left"></div>
+
+    <p>美食外卖</p>
+    <p>Takeaway</p>
+  </div>
+
+  <!-- takeOut-content -->
+  <div class="take-out-container">
+    <div class="autoRow filter-content">
+      <div class="row takeOut-filter">
+          <div class="col-xs-3" ng-click="takeOutFilter(1)">
+            <p>全部分类</p>
+            <p>Classification</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+          <div class="col-xs-3" ng-click="takeOutFilter(2)">
+            <p>优惠活动</p>
+            <p>Promotions</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+          <div class="col-xs-3" ng-click="takeOutFilter(3)">
+            <p>商圈及地图</p>
+            <p>District</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+          <div class="col-xs-3" ng-click="takeOutFilter(4)">
+            <p>排序</p>
+            <p>Sort</p>
+            <span class="glyphicon glyphicon-triangle-bottom"></span>
+          </div>
+      </div>
+    </div>
+
+    <div class="autoRow">
+      <div class="row take-store-list">
+        <div class="col-xs-4 store-list-left"><img src="../../img/food_ico.png"></div>
+        <div class="col-xs-8 store-list-right">
+          <p>汉堡王（澳门店）</p>
+          <p>Burger King（Macao shopl）</p>
+          <p>人均 MOP 40</p>
+          <p>Average spend MOP 40</p>
+          <p>免费配送 | 0元起配送</p>
+          <p>Free delivery fee | Start delivery at $ 0</p>
+          <p class="youhui-p"><span class="minus-ico">减</span> 满30减5 Buy 30 MOP get 5 MOP offMOP offMOP off</p>
+        </div>
+      </div>
+
+      <div class="row take-store-list">
+        <div class="col-xs-4 store-list-left"><img src="../../img/food_ico.png"></div>
+        <div class="col-xs-8 store-list-right">
+          <p>汉堡王（澳门店）</p>
+          <p>Burger King（Macao shopl）</p>
+          <p>人均 MOP 40</p>
+          <p>Average spend MOP 40</p>
+          <p>免费配送 | 0元起配送</p>
+          <p>Free delivery fee | Start delivery at $ 0</p>
+          <p class="youhui-p"><span class="discount-ico">折</span> 满30减5 Buy 30 MOP get 5 MOP off</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

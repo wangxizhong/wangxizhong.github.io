@@ -1,0 +1,19 @@
+<div ng-controller="orderNotesCtrl" class="pay addNotes">
+	<!-- 头标题 -->
+	<div class="app-header">
+		<!-- 左侧 -->
+		<div class="header-left"><i class="backIcon"></i></div>
+		<!-- 右侧 -->
+		<div class="header-right notesSave">
+			<div ng-bind="nowLang1.pay.save"></div>
+			<div class="lang2word" ng-bind="nowLang2.pay.save"></div>
+		</div>
+		<!-- 中间 -->
+		<div class="app-head-lang1" ng-bind="nowLang1.pay.orderNotes"></div>
+		<div class="app-head-lang2" ng-bind="nowLang2.pay.orderNotes"></div>
+	</div>
+	<!-- 内容 -->
+	<div class="notesArea">
+		<textarea ng-focus="scrollToTop();" ng-blur="checkNotes()" ng-model="notes"></textarea>
+	</div>
+</div>

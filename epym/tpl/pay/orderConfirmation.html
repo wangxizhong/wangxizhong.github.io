@@ -1,0 +1,130 @@
+<div ng-controller="orderConfirmationCtrl" class="pay">
+	<!-- 头标题 -->
+	<div class="app-header">
+		<!-- 左侧 -->
+		<div class="header-left"><i class="backIcon"></i></div>
+		<!-- 中间 -->
+		<div class="app-head-lang1" ng-bind="nowLang1.pay.orderConfirmation"></div>
+		<div class="app-head-lang2" ng-bind="nowLang2.pay.orderConfirmation"></div>
+	</div>
+	<!-- 送货地址 -->
+	<div class="deliveryAddress">
+		<!-- 无默认地址 -->
+		<div class="go_arrow" ng-show="false">
+			<div ng-bind="nowLang1.pay.addDeliveryAddress"></div>
+			<div class="lang2word" ng-bind="nowLang2.pay.addDeliveryAddress"></div>	
+		</div>
+		<!-- 有地址 -->
+		<div class="go_arrow" ng-show="true">
+			<div ng-bind="name + '王琳&nbsp;&nbsp;&nbsp;&nbsp;15855555555' + phone"></div>
+			<div class="address" ng-bind="'金隅嘉华大厦D做909'"></div>
+			<div class="lang2word" ng-bind="'enenennenenene'"></div>
+		</div>
+	</div>
+	<!-- 付款方式 -->
+	<div class="payway">
+		<div class="chooseway clearfix">
+			<div class="paywayWord fl">
+				<div ng-bind="nowLang1.pay.paymentMethod"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.paymentMethod"></div>
+			</div>
+			<div class="payMethod fr">
+				<div ng-bind="nowLang1.pay.cashonDelivery"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.cashonDelivery"></div>
+			</div>
+			<div class="payMethod methodMargin fr" ng-class="{chosenMethod : true}">
+				<div ng-bind="nowLang1.pay.onlinePayment"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.onlinePayment"></div>
+			</div>
+		</div>
+		<div class="chooseCard">
+			<div class="go_arrow">
+				<div ng-bind="nowLang1.pay.selectCard" ng-show="true"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.selectCard" ng-show="true"></div>
+				<div ng-bind="nowLang1.pay.addNewCard" ng-show="false"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.addNewCard" ng-show="false"></div>
+			</div>
+			<div class="chosenCard">
+				<i class="icbcIcon"></i>
+				<span ng-bind="'16546546446465464'"></span>
+			</div>
+		</div>
+		<div class="notes">
+			<div class="go_arrow">
+				<div ng-bind="nowLang1.pay.notes"></div>
+				<div ng-bind="nowLang2.pay.notes"></div>
+			</div>
+			<div class="notesDetail">
+				<span ng-bind="'sfjojjsdlfjlsfjla'"></span>
+			</div>
+		</div>
+	</div>
+	<!-- 订单信息 -->
+	<div class="orderMsg">
+		<!-- 商品信息 -->
+		<div class="goodsList msgHeight">
+			<div class="clearfix">
+				<div class="fl">
+					<div ng-bind="'炫辣鸡腿堡'"></div>
+					<div class="lang2word" ng-bind="'burger'"></div>
+				</div>
+				<div class="fr goodsPrice lineHeight" ng-bind="'MOP&nbsp;60' + num"></div>
+				<div class="fr goodsNum lineHeight" ng-bind="'x1' + num"></div>
+			</div>
+		</div>
+		<!-- 订单优惠 -->
+		<div class="msgHeight clearfix">
+			<div class="fl">
+				<div ng-bind="nowLang1.pay.orderAmount"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.orderAmount"></div>
+			</div>
+			<div class="fr orderPrice lineHeight" ng-bind="'MOP&nbsp;60' + price"></div>
+		</div>
+		<div class="freight clearfix">
+			<div class="fl">
+				<div ng-bind="nowLang1.pay.freight"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.freight"></div>
+			</div>
+			<div class="fr lineHeight" ng-bind="'MOP&nbsp;0' + price"></div>
+		</div>
+		<div class="freight clearfix">
+			<div class="fl">
+				<div>
+					<i></i>
+					<span ng-bind="nowLang1.pay.full + '30' + nowLang1.pay.minus + '5'"></span>
+				</div>
+				<div class="lang2word" ng-bind="nowLang2.pay.buy + '&nbsp;MOP&nbsp;' + '30' + '&nbsp;' + nowLang2.pay.get + '&nbsp;MOP&nbsp;' + '5' + '&nbsp;' + nowLang2.pay.off"></div>
+			</div>
+			<div class="fr lineHeight" ng-bind="'-&nbsp;MOP&nbsp;5' + price"></div>
+		</div>
+		
+		<!-- 实付金额 -->
+		<div class="actualPayAmount msgHeight clearfix">
+			<div class="fl">
+				<div ng-bind="nowLang1.pay.actualAmount"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.actualAmount"></div>
+			</div>
+			<div class="fr orderPrice lineHeight" ng-bind="'MOP&nbsp;60' + price"></div>
+		</div>
+		<!-- 配送方式 -->
+		<div class="msgHeight clearfix">
+			<div class="fl">
+				<div ng-bind="'汉堡王（澳门店）'"></div>
+				<div class="lang2word" ng-bind="'burgerKing'"></div>
+			</div>
+			<div class="rightWord fr">
+				<div ng-bind="nowLang1.pay.merchantDistribution"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.merchantDistribution"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 订单确认 -->
+	<div class="orderConfirm clearfix">
+		<div class="fl confirmWord">
+			<div ng-bind="nowLang1.pay.actualAmount"></div>
+			<div class="lang2word" ng-bind="nowLang2.pay.actualAmount"></div>
+		</div>
+		<div class="confirmPrice orderPrice fl" ng-bind="'MOP&nbsp;60' + price"></div>
+		<div class="confirmbtn fr">OK</div>
+	</div>
+</div>

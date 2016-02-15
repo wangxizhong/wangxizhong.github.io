@@ -1,0 +1,153 @@
+/*************************************/
+.red_btn {
+  margin: 0px auto;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: #fb5555;
+  border-radius: 3px;
+}
+/*************************************/
+
+
+
+
+
+
+
+/*登录 login.html*/
+.login {
+  background: #f1f1f1;
+}
+.login-content {
+  margin-top: 45px;
+
+  background: #f1f1f1;
+  padding: 15px 5%;
+}
+
+.login-user {
+  text-align: center;
+}
+
+.login-user input {
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  background: url('../../img/login-name.png') no-repeat #fff;
+  background-size: 20px;
+  padding: 12px 0px 12px 40px;
+  background-position: 10px;
+}
+
+.login-user input::-webkit-input-placeholder {
+    color: #cacaca;
+}
+
+.login-user input:focus{
+  outline:0;
+}
+
+.login-btn {
+  margin-top: 20px;
+}
+
+.find-password {
+  text-align: right;
+  padding: 5px 0px;
+  color: #fb5555;
+}
+
+.martop-n1 {
+  margin-top: -1px;
+}
+
+
+/*注册 register.html*/
+
+.cf {
+  overflow: auto;
+}
+
+.check-num {
+  float: left; 
+  width: 60%;
+}
+
+.check-btn {
+  width: 32%;
+  right: 5%; 
+  position:absolute;
+}
+
+.mardown-8 {
+  margin-bottom: 8px
+}
+
+
+
+/*重置密码 reset-pasword.html*/
+
+.disabled-click {
+  background: #c7c7c7;
+}
+
+.reset-phone {
+  color: #cacaca;
+  background: url('../../img/login-name.png') no-repeat;
+  line-height: 45px;
+  height: 45px;
+  background-size: 20px;
+  background-position: 10px;
+  padding-left: 40px;
+}
+
+/*选择身份 register-selectIdentity.html*/
+.select-title {
+  color: #cacaca;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.select-ident {
+  background: #fff;
+}
+
+.select-ident li {
+  padding: 10px 0px;
+  border-bottom: 1px solid #e7e7e7;
+  margin-left: 15px;
+}
+
+.select-ident li label {
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.btn-ok {
+  width: 90%;
+}
+
+input[type=radio] {
+  width: 12px;
+  height: 12px;
+  -webkit-appearance: none;
+  border: 1px solid #CACACA;
+  border-radius:22px;
+  vertical-align: middle;
+  margin: 0 10px 2px 0;
+}
+
+input[type=radio]:checked {
+  width: 12px;
+  height: 12px;
+  -webkit-appearance: none;
+  border: 1px solid #CACACA;
+  border-radius:22px;
+  background: url("../../img/radio_back.png") center no-repeat;
+  background-size: 12px;
+  vertical-align: middle;
+  outline: none;
+  /* margin: 0 5px 0 0; */
+}

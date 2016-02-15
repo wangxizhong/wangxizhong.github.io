@@ -1,0 +1,44 @@
+<div ng-controller="pymCtelCtrl">
+  <div class="app-header">
+    <!-- 左侧 -->
+    <a href="#/app/main" class="header-left">返回</a>
+    <!-- 中间 -->
+    <div class="app-head-lang1">中國電信</div>
+    <div class="app-head-lang2">China Telecom</div>
+  </div>
+  <div>
+    <form name="form" id="form" class="css-form" novalidate action="https://ebankpfovaopay.dccnet.com.cn/servlet/ICBCEBusinessServlet" target="my_frame">
+      <div class="input-group">
+        <input integer type="text" ng-model="billNo" name="billNo" class="form-control" placeholder="手機號碼 Phone No.">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-ctel" type="button" ng-click="ctelQuery()">OK</button>
+        </span>
+      </div>
+      <div ng-show="form.billNo.$error.integer" class="error-tips">請輸入8位或11位手機號碼</div>
+      <input type="hidden" id="merSignMsg" name="merSignMsg" value="{{merSignMsg}}"/>
+      <input type="hidden" id="merCert" name="merCert" value="{{merCert}}"/>
+    </form>
+    <div class="container">
+      <div class="btn-group btn-group-justified">
+        <a class="btn btn-default btn-lg" ng-click="ctelPym(50)">MOP 50</a>
+        <a class="btn btn-default btn-lg" ng-click="ctelPym(100)">MOP 100</a>
+        <a class="btn btn-default btn-lg" ng-click="ctelPym(200)">MOP 200</a>
+      </div>
+      <div class="btn-group btn-group-justified">
+        <a class="btn btn-default btn-lg" ng-click="ctelPym(300)">MOP 300</a>
+        <a class="btn btn-default btn-lg" ng-click="ctelPym(500)">MOP 500</a>
+        <a class="btn btn-default btn-lg" ng-click="ctelPym(1000)">MOP 1000</a>
+      </div>
+       
+      <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+            <h5>PAYMENT</h5>
+        </div>
+        <div class="modal-body">
+            <iframe name="my_frame" seamless frameborder="0" ng-src="{{url_iframe3}}" width="100%" height="100%"></iframe>
+        </div>
+      </script>
+    </div>
+  </div>
+</div>

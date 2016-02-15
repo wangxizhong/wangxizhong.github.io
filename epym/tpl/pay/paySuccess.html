@@ -1,0 +1,35 @@
+<div ng-controller="paySuccessCtrl" class="pay">
+	<!-- 头标题 -->
+	<div class="app-header">
+		<!-- 左侧 -->
+		<div class="header-left"><i class="backIcon"></i></div>
+		<!-- 中间 -->
+		<div class="app-head-lang1" ng-bind="nowLang1.pay.paySuccess"></div>
+		<div class="app-head-lang2" ng-bind="nowLang2.pay.paySuccess"></div>
+	</div>
+	<!-- 支付成功图标 -->
+	<div class="payment">
+		<div ng-bind="nowLang1.pay.paySuccess"></div>
+		<div class="paymentWord" ng-bind="nowLang2.pay.paySuccess"></div>
+		<img class="paymentImg" src="img/paymentSuccess.png">
+	</div>
+	<!-- 订单信息 -->
+	<div class="orderMsg">
+		<div class="chooseCard orderno clearfix">
+			<div class="fl">
+				<div ng-bind="nowLang1.pay.orderNo"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.orderNo"></div>
+			</div>
+			<div class="fl chosenCard orderNo">
+				<span ng-bind="'4646654544465'"></span>
+			</div>
+		</div>
+		<div class="msgHeight clearfix">
+			<div class="fl">
+				<div ng-bind="nowLang1.pay.actualAmount"></div>
+				<div class="lang2word" ng-bind="nowLang2.pay.actualAmount"></div>
+			</div>
+			<div class="fr orderPrice lineHeight" ng-bind="'MOP&nbsp;60' + price"></div>
+		</div>
+	</div>
+</div>

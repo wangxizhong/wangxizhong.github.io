@@ -1,0 +1,28 @@
+{
+    "retCode": "200",
+    "returnObj": {
+        "addrs": [{
+            "addrNameCn": "澳门半岛",
+            "addrNameEn": "澳门半岛",
+            "address": "address_001",
+            "custId": "1",
+            "detailAddr": "上地东里区",
+            "id": "1",
+            "isDefault": "1",
+            "linkMan": "whm",
+            "linkPhone": "8888888"
+        }],
+        "cardList": [{
+            "cardNo": "213434234324757563",
+            "cardType": "cards_001",
+            "cardTypeNameCn": "工行VIP卡",
+            "cardTypeNameEn": "ICBC VIP Card",
+            "custId": "1",
+            "id": "1",
+            "isDefault": "1",
+            "openBank": "1",
+            "status": "1"
+        }],
+        "disList": []
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "retCode": "200",
+    "returnObj":
+    {
+        "adverts":
+        [
+            {
+                "advertId": "b9720bf38d36421ead41e91087823788",
+                "imgId": "48443f401fc34894ae1253bce0f4a5e4",
+                "imgUrl": "img/storeGift.png",
+                "storeId": "010000005",
+                "advertName": "下单豪礼",
+                "advertDetail": "到店拆惊喜"
+            } , {
+                "advertId": "b9720bf38d36421ead41e91087823788",
+                "imgId": "48443f401fc34894ae1253bce0f4a5e4",
+                "imgUrl": "img/newStoreCome.png",
+                "storeId": "010000005",
+                "advertName": "新店来袭",
+                "advertDetail": "小鲜肉试吃"
+            } , {
+                "advertId": "b9720bf38d36421ead41e91087823788",
+                "imgId": "48443f401fc34894ae1253bce0f4a5e4",
+                "imgUrl": "img/newStoreCome.png",
+                "storeId": "010000005",
+                "advertName": "新店来袭",
+                "advertDetail": "小鲜肉试吃"
+            }, {
+                "advertId": "b9720bf38d36421ead41e91087823788",
+                "imgId": "48443f401fc34894ae1253bce0f4a5e4",
+                "imgUrl": "img/storeGift.png",
+                "storeId": "010000005",
+                "advertName": "下单豪礼",
+                "advertDetail": "到店拆惊喜"
+            }
+        ],
+        "menus":
+        [
+            {
+                "valueCn": "外卖",
+                "valueEn": "Takeout"
+            },
+            {
+                "valueCn": "到店",
+                "valueEn": "Pay at Store"
+            },
+            {
+                "valueCn": "生活缴费",
+                "valueEn": "Living payment"
+            }
+        ],
+        "recommends":
+        [
+            {
+                "avgPrice": 1,
+                "discounts":
+                [
+                    {
+                        "discountId": "H1160113000031",
+                        "discountType": "1",
+                        "postposition": 500,
+                        "prepose": 3000
+                    },
+                    {
+                        "discountId": "1000001",
+                        "discountType": "1",
+                        "postposition": 10,
+                        "prepose": 100
+                    }
+                ],
+                "recommendInfoId": "01",
+                "recommendInfos":
+                [
+                    {
+                        "dictCode": "store_recommend",
+                        "dictValue": "01",
+                        "valueCn": "米芝莲餐厅",
+                        "valueEn": "米芝莲餐厅"
+                    }
+                ],
+                "startingPrice": 200,
+                "storeId": "3333000003001",
+                "storeLogoUrl": "img/storeLogo.png",
+                "storeNameCn": "麦当劳",
+                "storeNameEn": "McDonald's"
+            },
+            {
+                "avgPrice": 1,
+                "discounts":
+                [
+                    {
+                        "discountId": "H1160113000031",
+                        "discountType": "1",
+                        "postposition": 500,
+                        "prepose": 3000
+                    },
+                    {
+                        "discount": "50",
+                        "discountId": "1000002",
+                        "discountType": "2"
+                    }
+                ],
+                "recommendInfoId": "02",
+                "recommendInfos":
+                [
+                    {
+                        "dictCode": "store_recommend",
+                        "dictValue": "02",
+                        "valueCn": "优质推介",
+                        "valueEn": "优质推介"
+                    }
+                ],
+                "startingPrice": 300,
+                "storeId": "3333000003002",
+                "storeLogoUrl": "img/storeLogo.png",
+                "storeNameCn": "肯德基",
+                "storeNameEn": "KFC"
+            },
+            {
+                "avgPrice": 1,
+                "discounts":
+                [
+                ],
+                "recommendInfoId": "03,04",
+                "recommendInfos":
+                [
+                    {
+                        "dictCode": "store_recommend",
+                        "dictValue": "03",
+                        "valueCn": "价格最平",
+                        "valueEn": "价格最平"
+                    },
+                    {
+                        "dictCode": "store_recommend",
+                        "dictValue": "04",
+                        "valueCn": "获奖餐厅",
+                        "valueEn": "获奖餐厅"
+                    }
+                ],
+                "startingPrice": 100,
+                "storeId": "3333000003003",
+                "storeLogoUrl": "img/storeLogo.png",
+                "storeNameCn": "必胜客",
+                "storeNameEn": "Pizzahut"
+            }
+        ]
+    }
+}

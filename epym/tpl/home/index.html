@@ -1,0 +1,69 @@
+<div ng-controller="homeCtrl" class="index">
+	<!-- 头标题 -->
+	<div class="app-header">
+		<!-- 左侧 
+		<div class="header-left">返回</div>-->
+		<!-- 右侧 
+		<div class="header-right">筛选</div>-->
+		<!-- 中间 -->
+		<div class="app-head-lang1" ng-bind="nowLang1.macao">澳门</div>
+		<div class="app-head-lang2" ng-bind="nowLang2.macao">Macao</div>
+	</div>
+	<!-- 主选项 -->
+	<div class="mainModel container-fluid">
+		<div class="col-xs-4 col-sm-4" ng-repeat="modelItem in modelData">
+			<img ng-src="{{modelItem.iconUrl}}">
+			<div class="lang1size" ng-bind="modelItem.lang1"></div>
+			<div class="lang2size" ng-bind="modelItem.lang2"></div>
+		</div>
+	</div>
+	<!-- 活动 -->
+	<div class="activity container-fluid">
+		<div class="col-xs-6 col-sm-6" ng-class="{activityModel1: $index==0, activityModel2: $index==1, activityModel3: $index==2, activityModel4: $index==3}" ng-repeat="activityItem in activityData">
+			<div class="activityName">
+				<div class="advertName" ng-bind="activityItem.advertName"></div>
+				<div class="advertDetail" ng-bind="activityItem.advertDetail"></div>
+			</div>
+			<div class="activityImg">
+				<img ng-src="{{activityItem.imgUrl}}">
+			</div>
+		</div>
+	</div>
+	<!-- 热门推荐 -->
+	<div class="hotStore">
+		<div class="hotName" ng-bind="nowLang1.home.recommends + '&nbsp;&nbsp;' + nowLang2.home.recommends"></div>
+		<div class="store" ng-repeat="recommendsItem in recommendsData">
+			<div class="storeImg">
+				<img ng-src="{{recommendsItem.storeLogoUrl}}">
+			</div>
+			<div class="storeMsg">
+				<!-- 店舖名称 -->
+				<div class="storeName">
+					<div class="storeNameLang1" ng-bind="recommendsItem.storeNameCn"></div>
+					<div class="storeNameLang2" ng-bind="recommendsItem.storeNameEn"></div>
+				</div>
+				<!-- 人均 -->
+				<div class="word">
+					<div ng-bind="nowLang1.home.average + '&nbsp;MOP&nbsp;' + recommendsItem.avgPrice"></div>
+					<div class="lang2" ng-bind="nowLang2.home.average + '&nbsp;MOP&nbsp;' + recommendsItem.avgPrice"></div>
+				</div>
+				<!-- 配送 -->
+				<div class="word">
+					<div ng-if="recommendsItem.startingPrice == 0" ng-bind="nowLang1.home.freeDelivery"></div>
+					<div class="lang2" ng-if="recommendsItem.startingPrice == 0" ng-bind="nowLang2.home.freeDelivery"></div>
+					<div ng-if="recommendsItem.startingPrice != 0" ng-bind="'MOP&nbsp;'+ recommendsItem.startingPrice + '&nbsp;' + nowLang1.home.minimumSpend"></div>
+					<div class="lang2" ng-if="recommendsItem.startingPrice != 0" ng-bind="'MOP&nbsp;'+ recommendsItem.startingPrice + '&nbsp;' + nowLang2.home.minimumSpend"></div>
+				</div>
+				<!-- 优惠 1满减 2打折 3加收服务费 -->
+				<div class="word discountWord" ng-repeat="discountItem in recommendsItem.discounts">
+					<i ng-class="{fullMinus: discountItem.discountType == 1, discount: discountItem.discountType == 2, serviceCharge: discountItem.discountType == 3}"></i>
+					<span ng-if="discountItem.discountType == 1" ng-bind="nowLang1.home.full + discountItem.prepose + nowLang1.home.minus + discountItem.postposition + '&nbsp;' + nowLang2.pay.buy + '&nbsp;MOP&nbsp;' + discountItem.prepose + '&nbsp;' + nowLang2.pay.get + '&nbsp;MOP&nbsp;' + discountItem.postposition + '&nbsp;' + nowLang2.pay.off"></span>
+					<span ng-if="discountItem.discountType == 2"></span>
+					<span ng-if="discountItem.discountType == 3"></span>
+				</div>
+			</div>
+			<a class="store_recommend" href="javascript:void(0);" ng-repeat="storeRecommendItem in recommendsItem.recommendInfos" ng-bind="storeRecommendItem.valueCn + '|' + storeRecommendItem.valueEn"></a>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,122 @@
+﻿{
+        "retCode": "200",
+        "returnObj":
+        {
+            "categoryLarges":
+            [
+                {
+                    "categorySmalls":
+                    [
+                        {
+                            "bcode": "1",
+                            "code": "1",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "中菜馆",
+                            "nameEn": "food"
+                        },
+                        {
+                            "bcode": "1",
+                            "code": "10",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "川菜",
+                            "nameEn": "Cafe"
+                        },{
+                            "bcode": "1",
+                            "code": "1",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "中菜馆",
+                            "nameEn": "food"
+                        },
+                        {
+                            "bcode": "1",
+                            "code": "10",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "川菜",
+                            "nameEn": "Cafe"
+                        },{
+                            "bcode": "1",
+                            "code": "1",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "中菜馆",
+                            "nameEn": "food"
+                        },
+                        {
+                            "bcode": "1",
+                            "code": "10",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "川菜",
+                            "nameEn": "Cafe"
+                        },{
+                            "bcode": "1",
+                            "code": "1",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "中菜馆",
+                            "nameEn": "food"
+                        },
+                        {
+                            "bcode": "1",
+                            "code": "10",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "川菜",
+                            "nameEn": "Cafe"
+                        }
+                    ],
+                    "code": "1",
+                    "hits": "0",
+                    "isShow": "1",
+                    "nameCn": "餐饮业",
+                    "nameEn": "eat"
+                },
+
+                {
+                    "categorySmalls":
+                    [
+                        {
+                            "bcode": "1",
+                            "code": "1",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "KTV会所",
+                            "nameEn": "food"
+                        },
+                        {
+                            "bcode": "1",
+                            "code": "10",
+                            "hits": "0",
+                            "isShow": "1",
+                            "nameCn": "游戏厅",
+                            "nameEn": "Game"
+                        }
+                    ],
+                    "code": "1",
+                    "hits": "0",
+                    "isShow": "1",
+                    "nameCn": "娱乐业",
+                    "nameEn": "eat"
+                }
+            ],
+            "communitys":
+            [
+                {
+                    "communityCode": "1",
+                    "communityNameCn": "美高梅",
+                    "communityNameEn": "meigaomei",
+                    "countryCode": "CN"
+                },
+                {
+                    "communityCode": "2",
+                    "communityNameCn": "永利",
+                    "communityNameEn": "yongli",
+                    "countryCode": "CN"
+                }
+            ]
+        }
+    }

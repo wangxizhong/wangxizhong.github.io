@@ -1,0 +1,22 @@
+<div ng-controller="loginCtrl" ng-class="login">
+  <!-- 头标题 -->
+  <div class="app-header">
+    <!-- 左侧 -->
+    <div class="header-left"><i class="backIcon"></i></div>
+    <!-- 中间 -->
+    <div class="app-head-lang1" ng-bind="::nowLang1.login.login"></div>
+    <div class="app-head-lang2" ng-bind="::nowLang2.login.login"></div>
+  </div>
+  <div class="login-content">
+      <div class="login-user">
+        <input type="text" placeholder="{{nowLang1.login.inputPhone}} {{nowLang2.login.inputPhone}}">
+      </div>
+
+      <div class="login-user martop-n1">
+        <input type="text" placeholder="{{nowLang1.login.inputPassWord}} {{nowLang2.login.inputPassWord}}">
+      </div>
+
+      <div class="red_btn login-btn" ng-bind="::nowLang1.login.login + '&nbsp;' + nowLang2.login.login"></div>
+      <div class="find-password" ng-bind="::nowLang1.login.forgotPassWord + '&nbsp;' + nowLang2.login.forgotPassWord"></div>
+  </div>
+</div>

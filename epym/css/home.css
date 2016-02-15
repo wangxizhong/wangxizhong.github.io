@@ -1,0 +1,119 @@
+.index {
+	background: #ffffff;
+}
+.index .mainModel {
+	padding: 15px 15px 12px 15px;
+	text-align: center;
+	line-height: 15px;
+	border-bottom: 5px solid #f1f1f1;
+	border-top: 2px solid #f1f1f1; 
+	color: #3c3c3c;
+}
+.index .mainModel img {
+	width: 50px;
+}
+.index .mainModel .lang1size {
+	font-size: 14px;
+	margin-top: 5px;
+}
+.index .mainModel .lang2size {
+	font-size: 12px;
+}
+.index .activity {
+	padding: 20px 15px;
+	border-bottom: 5px solid #f1f1f1;
+}
+.index .activityModel1 {
+	padding-right: 15px;
+	padding-left: 0px;
+	padding-bottom: 15px;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+.index .activityModel2 {
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 0;
+	border-bottom: 1px solid #e7e7e7;
+}
+.index .activityModel3 {
+	padding-right: 15px;
+	padding-left: 0px;
+	padding-top: 15px;
+	border-right: 1px solid #e7e7e7;
+}
+.index .activityModel4 {
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 0;
+}
+.index .activity img {
+	width: 50px;
+}
+.index .activity .activityName {
+	float: left;
+}
+.index .activity .activityImg {
+	float: right;
+}
+.index .activity .activityName .advertName {
+	font-size: 18px;
+	color: #fab728;
+	margin-bottom: 4px;
+}
+.index .activity .activityName .advertDetail {
+	font-size: 12px;
+	color: #cacaca;
+}
+.index .hotStore .hotName {
+	font-size: 17px;
+	line-height: 38px;
+	border-bottom: 1px solid #e7e7e7;
+	padding-left: 15px;
+}
+.index .hotStore .store {
+	margin-left: 15px;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+.index .hotStore .store .storeImg {
+	float: left;
+	width: 86px;
+}
+.index .hotStore .store .storeMsg {
+	margin-left: 86px;
+}
+.index .hotStore .store .storeMsg .storeName {
+	margin-bottom: 6px;
+	color: #3c3c3c;
+}
+.index .hotStore .store .storeMsg .storeNameLang1 {
+	font-size: 16px;
+	line-height: 16px;
+}
+.index .hotStore .store .storeMsg .storeNameLang2 {
+	margin-top: 4px;
+	font-size: 13px;
+} 
+.index .hotStore .store .storeMsg .word {
+	margin-bottom: 12px;
+	font-size: 13px;
+	line-height: 13px;
+	color: #6f6f6f;
+}
+.index .hotStore .store .storeMsg .lang2 {
+	margin-top: 5px;
+}
+.index .hotStore .store .store_recommend {
+	padding: 2px 6px;
+	font-size: 13px;
+	line-height: 13px;
+	color: #ffffff;
+	background: #fa8282;
+	margin-right: 30px;
+	border-radius: 4px;
+}
+.index .hotStore .store .discountWord {
+	color: #cacaca!important;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>惠生活繳費</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link rel="stylesheet" href="css/login.css" type="text/css" />
+	<link rel="stylesheet" href="css/home.css" type="text/css" />
+	<link rel="stylesheet" href="css/pay.css" type="text/css" />
+	<link rel="stylesheet" href="css/take-out.css" type="text/css" />
+
+</head>
+<body ng-controller="AppCtrl">
+	<div class="app" id="app" ng-class="{isScroll : isScroll}" ui-view></div>
+
+	<!-- jQuery -->
+	<script src="vendor/jquery/jquery-2.2.0.min.js"></script>
+	<!-- Angular -->
+	<script src="vendor/angular/angular.js"></script>
+	<script src="vendor/angular/angular-cookies.js"></script>
+	<script src="vendor/angular/angular-touch.js"></script>
+	<!-- ui-route -->
+	<script src="vendor/angular/angular-ui-router.js"></script>
+	<script src="vendor/angular/ngStorage.js"></script>
+	<!-- lazyload -->
+	<script src="vendor/angular/ocLazyLoad.js"></script>
+	<!-- bootstrap -->
+	<script src="vendor/angular/ui-bootstrap-tpls-1.1.1.min.js"></script>
+	<!-- App -->
+	<script src="js/app.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/config.lazyload.js"></script>
+	<script src="js/config.router.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/services/ui-load.js"></script>
+	<script src="js/l10n/cn.js"></script>
+	<script src="js/l10n/en.js"></script>
+	<script src="js/services/api.js"></script>
+	<script src="js/services/language.js"></script>
+	<script src="js/directives/ui-butterbar.js"></script>
+</body>
+</html>

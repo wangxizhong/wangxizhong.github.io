@@ -1,0 +1,156 @@
+<div ng-controller="takeOutCtrl">
+  <div class="app-header login-header">
+    <div class="header-left"></div>
+
+    <p>汉堡王（澳门店）</p>
+    <p>Burger King(Macao Shopl)</p>
+  </div>
+
+  <!-- takeOut-content -->
+  <div class="take-out-container">
+
+    <!-- 滚动页面时固定inner块 -->
+      <div class="autoRow select-fixed" id="inner">
+        <div class="row takeOut-filter select-food-filter">
+            <div class="col-xs-6" ng-click="takeOutFilter(1)">
+              <p>菜单</p>
+              <p>Set menu</p>
+              <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </div>
+            <div class="col-xs-6" ng-click="takeOutFilter(2)">
+              <p>店铺</p>
+              <p>shop</p>
+              <span class="glyphicon glyphicon-triangle-bottom"></span>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 floating-info">
+            <span class="minus-ico">减</span>
+             满30减5 Buy 30 MOP get 5 MOP off
+          </div>
+        </div>
+      </div>
+
+      <div class="autoRow" style="margin-top: 118px;">
+        <div class="row food-list aSetFood-list no-borBottom">
+            <div class="col-xs-3 food-list-left"><img src="../../img/hanbao.png"></div>
+            <div class="col-xs-7 food-list-right">
+              <p>芝士培根<span class="line-font-ico">免配送费 | Free Delivery</span></p>
+              <p>Cheese Bacon</p>
+              <p>￥ 23<span class="gray-font">/份 sel</span></p>
+            </div>
+            <div class="col-xs-2">
+                <i class="add-food-ico"></i>
+            </div>
+        </div>
+
+        <div class="row aSet-detail-container">
+          <div>头盘 Appelizer</div>
+          <a class="aSet-detail">
+            <p>头盘</p>
+            <p>Appelizer</p>
+          </a>
+          <a class="aSet-detail">
+            <p>头盘</p>
+            <p>Appelizer</p>
+          </a>
+          <a class="aSet-detail">
+            <p>头盘头盘</p>
+            <p>Appelizer</p>
+          </a>
+          <a class="aSet-detail">
+            <p>头盘头盘</p>
+            <p>Appelizer</p>
+          </a>
+          <a class="aSet-detail">
+            <p>头盘头盘</p>
+            <p>Appelizer</p>
+          </a>
+        </div>
+
+        <div class="row aSet-detail-container">
+          <div>汤 Soup</div>
+          <a class="aSet-detail">
+            <p>可乐</p>
+            <p>cala</p>
+          </a>
+          <a class="aSet-detail">
+            <p>雪碧</p>
+            <p>cala</p>
+          </a>
+          <a class="aSet-detail">
+            <p>雪碧</p>
+            <p>cala</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- 购物车内容 -->
+      <div class="autoRow" style="margin-top: 118px;">
+        <!-- <div class="row pay-car-title">
+          <div class="col-xs-6">
+            <p>购物车</p>
+            <p>Shopping carl</p>
+          </div>
+          <div class="col-xs-6 text-right">
+            <p>清空全部</p>
+            <p>Clear All</p>
+          </div>
+        </div>
+
+        <div class="pay-car-aSetList-container">
+          <div class="row pay-car-list no-borBottom no-pad-btm">
+            <div class="col-xs-5">
+              <p>牛肉汉堡</p>
+              <p>Beef Burge</p>
+            </div>
+            <div class="col-xs-3 car-food-money">
+              <p>MOP 15</p>
+            </div>
+            <div class="col-xs-4">
+              <i class="odd-food-ico"></i>
+              <span class="car-count">1</span>
+              <i class="add-food-ico"></i>
+            </div>
+          </div>
+
+          <div class="row aSet-detail-container bor-bottom">
+            <a class="aSet-detail">
+              <p>头盘</p>
+              <p>Appelizer</p>
+            </a>
+            <a class="aSet-detail">
+              <p>头盘</p>
+              <p>Appelizer</p>
+            </a>
+            <a class="aSet-detail">
+              <p>头盘头盘</p>
+              <p>Appelizer</p>
+            </a>
+            <a class="aSet-detail">
+              <p>头盘头盘</p>
+              <p>Appelizer</p>
+            </a>
+            <a class="aSet-detail">
+              <p>头盘头盘</p>
+              <p>Appelizer</p>
+            </a>
+          </div>
+        </div> -->
+
+        <!-- 购物车没展开时 -->
+        <div class="row pay-car">
+          <div class="col-xs-2 pay-car-ico">
+            <span>8</span>
+          </div>
+          <div class="col-xs-7 pay-car-info">
+              <p>MOP 53</p>
+              <p>还差 MOP 10 起送 Short of 10 yuan to send</p>
+          </div>
+          <div class="col-xs-3 pay-car-btn">OK</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
