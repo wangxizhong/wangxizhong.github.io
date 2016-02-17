@@ -19,9 +19,12 @@ app.controller('pymCtelCtrl', function($scope, $http, $stateParams, $uibModal){
       });
       
       $http.get('data/merSignMsg.json').success(function(data) {
+        console.log("ctelPym http success");
         $scope.merSignMsg = data.merSignMsg;
         $scope.merCert = data.merCert;
-              
+        
+        document.getElementById('form').submit();
+        
         /*
         var form = angular.element('#form');
         //console.log(form);
@@ -56,8 +59,8 @@ app.controller('pymCtelCtrl', function($scope, $http, $stateParams, $uibModal){
 });
 
 app.controller('modalContentCtrl', function($scope, $uibModalInstance, $sce){
-    $scope.url_iframe = $sce.trustAsResourceUrl('https://ebankpfovaopay.dccnet.com.cn/servlet/ICBCEBusinessServlet');
-     
+    //$scope.url_iframe = $sce.trustAsResourceUrl('https://ebankpfovaopay.dccnet.com.cn/servlet/ICBCEBusinessServlet');
+    
     $scope.cancel = function() {
       console.log("dismiss");
       $uibModalInstance.dismiss('cancel');
