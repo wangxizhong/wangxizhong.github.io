@@ -8,44 +8,29 @@ app.controller('pymCtelCtrl', function($scope, $http, $stateParams, $uibModal){
         console.log(data.returnObj.type);
       });
     };
-      
+    
     $scope.ctelPym = function(billAmt) {
       console.log("ctelPym start");
       
-      $uibModal.open({ 
-        templateUrl: 'myModalContent.html',
-        controller: 'modalContentCtrl',
-        windowClass: 'large-Modal'
-      });
+      $http.get('data/ctel_query_'+$scope.billNo+'.json').success(function(data) {
+        console.log(data.returnObj.type);
+        if (data.resultCode == '00000') {
+          $uibModal.open({ 
+            templateUrl: 'myModalContent.html',
+            controller: 'modalContentCtrl',
+            windowClass: 'large-Modal'
+          });
+        } else {
+          alert("您輸入的號碼不存在，請輸入正確的手機號碼。\nInvalid Phone No.");
+        }
+      }).error(function (data, status, headers, config) {
+        console.log("ctel_query error");
+      });;
       
       $http.get('data/merSignMsg.json').success(function(data) {
         console.log("ctelPym http success");
         $scope.merSignMsg = data.merSignMsg;
         $scope.merCert = data.merCert;
-        
-        document.getElementById('form').submit();
-        
-        /*
-        var form = angular.element('#form');
-        //console.log(form);
-        //form.submit();
-        
-        var epos = angular.element('#epos');
-        epos.append('<p>added</p>');
-        console.log(epos);
-        
-        epos.load('tpl/home/index.html', {
-          merSignMsg: $scope.merSignMsg,
-          merCert: $scope.merCert,
-          billNo: "66668888"
-        }, function(response, status, xhr) {
-          console.log(status);
-          if (status == 'error') {
-            console.log("Sorry but there was an error: ");
-          }
-        });
-        */
-        
       }).error(function (data, status, headers, config) {
         console.log("error");
       });
@@ -59,22 +44,8 @@ app.controller('pymCtelCtrl', function($scope, $http, $stateParams, $uibModal){
 });
 
 app.controller('modalContentCtrl', function($scope, $uibModalInstance, $sce){
-    //$scope.url_iframe = $sce.trustAsResourceUrl('https://ebankpfovaopay.dccnet.com.cn/servlet/ICBCEBusinessServlet');
-    
     $scope.cancel = function() {
       console.log("dismiss");
       $uibModalInstance.dismiss('cancel');
     };
-});
-
-app.directive('epos-directive', function(){
-  return {
-    link: function(scope, element, attrs) {
-      console.log("merSignMsg:"+scope.merSignMsg);
-      //here your all jQuery code will lie to ensure binding
-      $(element).load('tpl/home/index.html', function (data) {
-        console.log(data);
-      });
-    }
-  }
 });

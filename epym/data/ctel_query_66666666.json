@@ -1,0 +1,8 @@
+{
+    "retCode": "200",
+    "resultCode": "00000",
+    "returnObj": {
+        "type": "20",
+        "billAmt": "0"
+    }
+}
