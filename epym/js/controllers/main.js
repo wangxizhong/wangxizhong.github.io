@@ -12,10 +12,9 @@ app.controller('pymCtelCtrl', function($scope, $http, $stateParams, $uibModal){
     $scope.ctelPym = function(billAmt) {
       console.log("ctelPym start");
       
-      $http.get('data/ctel_query_'+$scope.billNo+'.json').success(function(data) {
+      $http.get('data/ctel_query_'+$scope.goodsID+'.json').success(function(data) {
         console.log(data.returnObj.type);
         if (data.resultCode == '00000') {
-          console.log("ctel_query 00000");
           $uibModal.open({ 
             templateUrl: 'myModalContent.html',
             controller: 'modalContentCtrl',
@@ -30,7 +29,6 @@ app.controller('pymCtelCtrl', function($scope, $http, $stateParams, $uibModal){
       });;
       
       $http.get('data/merSignMsg.json').success(function(data) {
-        console.log("ctelPym http success");
         $scope.merSignMsg = data.merSignMsg;
         $scope.merCert = data.merCert;
       }).error(function (data, status, headers, config) {
@@ -46,8 +44,6 @@ app.controller('pymCtelCtrl', function($scope, $http, $stateParams, $uibModal){
 });
 
 app.controller('modalContentCtrl', function($scope, $uibModalInstance, $sce){
-    
-    
     $scope.cancel = function() {
       console.log("dismiss");
       $uibModalInstance.dismiss('cancel');
