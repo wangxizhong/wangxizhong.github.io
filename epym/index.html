@@ -10,7 +10,12 @@
 	<link rel="stylesheet" href="css/home.css" type="text/css" />
 	<link rel="stylesheet" href="css/pay.css" type="text/css" />
 	<link rel="stylesheet" href="css/take-out.css" type="text/css" />
-
+<script>
+        function iframe_load() {
+          console.log("Frame is loaded");
+          document.getElementById("myframe").contentDocument.getElementsByClassName('payButton')[0].style.visibility='hidden';
+        }
+      </script>
 </head>
 <body ng-controller="AppCtrl">
 	<div class="app" id="app" ng-class="{isScroll : isScroll}" ui-view></div>
